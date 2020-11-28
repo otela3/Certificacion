@@ -29,6 +29,10 @@ public class Repository {
         return mansionApiService.getMansiones();
     }
 
+    public void insertMansiones(Mansion mansion){
+        mansionDao.insertMansiones(mansion);
+    }
+
     public LiveData<List<Mansion>> getMansionOfline(){
         return mansionDao.getMansionesOfline();
     }

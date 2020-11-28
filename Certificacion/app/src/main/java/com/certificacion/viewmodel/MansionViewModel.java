@@ -53,6 +53,10 @@ public class MansionViewModel extends ViewModel {
                         error -> Log.e(TAG, "getMansiones: "+ error.getMessage() ));
     }
 
+    public void insertMansiones(Mansion mansion){
+        repository.insertMansiones(mansion);
+    }
+
     public LiveData<List<Mansion>> getMansionListOfline(){
         return mansionListOfline;
     }
